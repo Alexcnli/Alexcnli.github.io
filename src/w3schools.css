@@ -859,6 +859,10 @@ a {
     display: inline-block !important
 }
 
+.w3-flex {
+    display: flex
+}
+
 @media (max-width:1205px) {
     .w3-auto {
         max-width: 95%
