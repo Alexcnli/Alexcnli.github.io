@@ -866,6 +866,8 @@ a {
   
 .w3-flex-child-element {
     flex: 1;
+    justify-content: center;
+    align-items: center;
     margin: 10px;
   }
 
