@@ -370,7 +370,9 @@ a {
     left: 0;
     z-index: 99;
 }
-
+.profilePic:hover{
+    display: none;
+}
 .profilePic:hover .img-top {
     display: inline;
 }
@@ -877,8 +879,9 @@ a {
 }
 
 .w3-flex-parent-element {
+    justify-content: center;
+    align-items: center;
     display: flex;
-    width: 100%;
   }
   
 .w3-flex-child-element {
