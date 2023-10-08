@@ -358,6 +358,19 @@ a {
     padding-left: 16px
 }
 
+.profilePic {
+    position: relative;
+    display: inline-block;
+}
+.profilePic .img-top {
+    display: none;
+    position: absolute;
+}
+
+.profilePic:hover .img-top {
+    display: inline;
+}
+
 .w3-btn,
 .w3-button {
     border: none;
