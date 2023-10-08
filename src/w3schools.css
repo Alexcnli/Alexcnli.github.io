@@ -357,27 +357,6 @@ a {
 .w3-table-all td:first-child {
     padding-left: 16px
 }
-.profilePic {
-    width: 100%;
-    position: relative;
-    display: inline-block;
-}
-.profilePic .img-top {
-    width: 100%;
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 99;
-}
-
-.profilePic:hover .front{
-    display: none;
-}
-.profilePic:hover .img-top {
-    display: inline;
-}
-
 .w3-btn,
 .w3-button {
     border: none;
@@ -881,12 +860,33 @@ a {
 
 .w3-flex-parent-element {
     display: flex;
+    justify-content: center; 
+    align-items: center;
   }
   
 .w3-flex-child-element {
+    justify-content: center; 
+    align-items: center;
     flex: 1;
     margin: 10px;
   }
+
+.profilePic {
+    width: 100%;
+    position: relative;
+    display: inline-block;
+}
+.profilePic .img-top {
+    width: 100%;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+.profilePic:hover .img-top {
+    display: inline;
+}
 
 @media (max-width:1205px) {
     .w3-auto {
