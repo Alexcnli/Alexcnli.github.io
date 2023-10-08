@@ -357,7 +357,11 @@ a {
 .w3-table-all td:first-child {
     padding-left: 16px
 }
-
+.profilePic {
+    width: 100%;
+    position: relative;
+    display: inline-block;
+}
 .profilePic .img-top {
     width: 100%;
     display: none;
@@ -366,11 +370,7 @@ a {
     left: 0;
     z-index: 99;
 }
-.profilePic .front{
-    width: 100%;
-    position: relative;
-    display: inline-block;
-}
+
 .profilePic:hover .front{
     display: none;
 }
@@ -880,15 +880,11 @@ a {
 }
 
 .w3-flex-parent-element {
-    justify-content: center;
-    align-items: center;
     display: flex;
   }
   
 .w3-flex-child-element {
     flex: 1;
-    justify-content: center;
-    align-items: center;
     margin: 10px;
   }
 
