@@ -867,6 +867,8 @@ a {
 .w3-flex-child-element {
     flex: 1;
     margin: 10px;
+    align-items: center; 
+    justify-content: center; 
   }
 
 @media (max-width:1205px) {
