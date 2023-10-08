@@ -358,11 +358,6 @@ a {
     padding-left: 16px
 }
 
-.profilePic {
-    width: 100%;
-    position: relative;
-    display: inline-block;
-}
 .profilePic .img-top {
     display: none;
     position: absolute;
@@ -370,7 +365,12 @@ a {
     left: 0;
     z-index: 99;
 }
-.profilePic:hover{
+.profilePic .front{
+    width: 100%;
+    position: relative;
+    display: inline-block;
+}
+.profilePic:hover .front{
     display: none;
 }
 .profilePic:hover .img-top {
