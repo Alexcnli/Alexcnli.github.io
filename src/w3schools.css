@@ -359,6 +359,7 @@ a {
 }
 
 .profilePic .img-top {
+    width: 100%;
     display: none;
     position: absolute;
     top: 0;
