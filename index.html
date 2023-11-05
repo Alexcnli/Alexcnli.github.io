@@ -10,7 +10,7 @@
   
 <style>
   body {font-family: "Roboto", sans-serif}
-  .w3-bar-block .w3-bar-item {
+  .bar-block .bar-item {
     padding: 16px;
     font-weight: bold;
 }
@@ -18,49 +18,49 @@
   
 <body>
 
-<nav class="w3-sidebar w3-bar-block w3-collapse w3-animate-left w3-card" style="z-index:3;width:250px;" id="mySidebar">
-  <a class="w3-bar-item w3-button w3-border-bottom w3-large" href="#"><img src="meeple640.png" style="width:50%;"></a>
-  <a class="w3-bar-item w3-button w3-hide-large w3-large" href="javascript:void(0)" onclick="w3_close()">Close <i class="fa fa-remove"></i></a>
+<nav class="sidebar bar-block collapse animate-left card" style="z-index:3;width:250px;" id="mySidebar">
+  <a class="bar-item button border-bottom large" href="#"><img src="meeple640.png" style="width:50%;"></a>
+  <a class="bar-item button hide-large large" href="javascript:void(0)" onclick="w3_close()">Close <i class="fa fa-remove"></i></a>
   <div>
-    <a class="w3-bar-item w3-button" onclick="myAccordion('demo')" href="javascript:void(0)">UdS Notes<i class="fa fa-caret-down"></i></a>
-    <div id="demo" class="w3-hide">
-      <a class="w3-bar-item w3-button" href="#">Link</a>
-      <a class="w3-bar-item w3-button" href="#">Link</a>
-      <a class="w3-bar-item w3-button" href="#">Link</a>
+    <a class="bar-item button" onclick="myAccordion('demo')" href="javascript:void(0)">UdS Notes<i class="fa fa-caret-down"></i></a>
+    <div id="demo" class="hide">
+      <a class="bar-item button" href="#">Link</a>
+      <a class="bar-item button" href="#">Link</a>
+      <a class="bar-item button" href="#">Link</a>
     </div>
   </div>
   <div>
-    <a class="w3-bar-item w3-button" onclick="myAccordion('demo')" href="javascript:void(0)">CUHK Notes<i class="fa fa-caret-down"></i></a>
-    <div id="demo" class="w3-hide">
-      <a class="w3-bar-item w3-button" href="#">Link</a>
-      <a class="w3-bar-item w3-button" href="#">Link</a>
-      <a class="w3-bar-item w3-button" href="#">Link</a>
+    <a class="bar-item button" onclick="myAccordion('demo')" href="javascript:void(0)">CUHK Notes<i class="fa fa-caret-down"></i></a>
+    <div id="demo" class="hide">
+      <a class="bar-item button" href="#">Link</a>
+      <a class="bar-item button" href="#">Link</a>
+      <a class="bar-item button" href="#">Link</a>
     </div>
   </div>
-  <a class="w3-bar-item w3-button" href="/AboutMe.html">My Profile</a>
-  <a class="w3-bar-item w3-button" href="#">Upcoming...</a>
+  <a class="bar-item button" href="/AboutMe.html">My Profile</a>
+  <a class="bar-item button" href="#">Upcoming...</a>
 </nav>
 
-<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
+<div class="overlay hide-large animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
 
-<div class="w3-main" style="margin-left:250px;">
+<div class="main" style="margin-left:250px;">
 
-<div id="myTop" class="w3-container w3-top w3-theme w3-large">
-  <p><i class="fa fa-bars w3-button w3-teal w3-hide-large w3-xlarge" onclick="w3_open()"></i>
-  <span id="myIntro" class="w3-hide">Alex's Github Webpage</span></p>
+<div id="myTop" class="container top theme large">
+  <p><i class="fa fa-bars button teal hide-large xlarge" onclick="w3_open()"></i>
+  <span id="myIntro" class="hide">Alex's Github Webpage</span></p>
 </div>
 
-<header class="w3-container w3-theme" style="padding:64px 32px">
-  <h1 class="w3-xxxlarge">Alex's Github Webpage</h1>
+<header class="container theme" style="padding:64px 32px">
+  <h1 class="xxxlarge">Alex's Github Webpage</h1>
 </header>
 
-<div class="w3-container" style="padding:32px">
+<div class="container" style="padding:32px">
 
 <h2>Donec luctus auctor quam.</h2>
 
 <p>Donec luctus auctor quam. Fusce vitae tellus et ante faucibus sagittis non lobortis est.</p>
 
-<ul class="w3-leftbar w3-theme-border" style="list-style:none">
+<ul class="leftbar theme-border" style="list-style:none">
  <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </li>
 </ul>
 <br>
@@ -68,7 +68,7 @@
 
 <hr>
 <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </h2>
-<div class="w3-container w3-sand w3-leftbar">
+<div class="container sand leftbar">
 <p><i>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </i><br>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
 </div>
@@ -77,16 +77,16 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
 <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </h2>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
 
-<div class="w3-panel w3-light-grey w3-padding-16 w3-card">
-<h3 class="w3-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </h3>
-<div class="w3-content" style="max-width:800px">
+<div class="panel light-grey padding-16 card">
+<h3 class="center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </h3>
+<div class="content" style="max-width:800px">
 <a href="#" target="_blank" title=""><img src="meeple640.png" style="width:98%;margin:20px 0" alt="meeple"></a><br>
-<div class="w3-row">
-  <div class="w3-col m6">
-    <a href="tryw3css_templates_band.htm" target="_blank" class="w3-button w3-padding-large w3-dark-grey" style="width:98.5%">Lorem ipsum</a>
+<div class="row">
+  <div class="col m6">
+    <a href="tryw3css_templates_band.htm" target="_blank" class="button padding-large dark-grey" style="width:98.5%">Lorem ipsum</a>
   </div>
-  <div class="w3-col m6">
-    <a href="w3css_templates.asp" class="w3-button w3-padding-large w3-dark-grey" style="width:98.5%">Lorem ipsum»</a>
+  <div class="col m6">
+    <a href="w3css_templates.asp" class="button padding-large dark-grey" style="width:98.5%">Lorem ipsum»</a>
   </div>
 </div>
 </div>
@@ -94,7 +94,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
 
 </div>
 
-<footer class="w3-container w3-theme" style="padding:32px">
+<footer class="container theme" style="padding:32px">
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
 </footer>
      
@@ -116,24 +116,24 @@ function w3_close() {
 window.onscroll = function() {myFunction()};
 function myFunction() {
   if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-    document.getElementById("myTop").classList.add("w3-card-4", "w3-animate-opacity");
-    document.getElementById("myIntro").classList.add("w3-show-inline-block");
+    document.getElementById("myTop").classList.add("card-4", "animate-opacity");
+    document.getElementById("myIntro").classList.add("show-inline-block");
   } else {
-    document.getElementById("myIntro").classList.remove("w3-show-inline-block");
-    document.getElementById("myTop").classList.remove("w3-card-4", "w3-animate-opacity");
+    document.getElementById("myIntro").classList.remove("show-inline-block");
+    document.getElementById("myTop").classList.remove("card-4", "animate-opacity");
   }
 }
 
 // Accordions
 function myAccordion(id) {
   var x = document.getElementById(id);
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-    x.previousElementSibling.className += " w3-theme";
+  if (x.className.indexOf("show") == -1) {
+    x.className += " show";
+    x.previousElementSibling.className += " theme";
   } else { 
-    x.className = x.className.replace("w3-show", "");
+    x.className = x.className.replace("show", "");
     x.previousElementSibling.className = 
-    x.previousElementSibling.className.replace(" w3-theme", "");
+    x.previousElementSibling.className.replace(" theme", "");
   }
 }
 </script>
