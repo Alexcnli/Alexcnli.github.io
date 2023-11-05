@@ -197,7 +197,7 @@ button:-moz-focusring,
     outline: 1px dotted ButtonText
 }
 
-button#scrollButton {
+.scrollButton {
     background-color: #007bff;
     color: #fff;
     border: none;
