@@ -1,142 +1,238 @@
 <!DOCTYPE html>
 <html>
-<title>Alex's Github Webpage</title>
-  
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="src/w3schools.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-<link rel="icon" type="image/png" href="meeple180.png">
-<script src="https://kit.fontawesome.com/e357f5b9b7.js" crossorigin="anonymous"></script>
-  
-<style>
-  body {font-family: "Roboto", sans-serif}
-  .bar-block .bar-item {
-    padding: 16px;
-    font-weight: bold;
-}
-</style>
-  
-<body>
 
-<nav class="sidebar bar-block collapse animate-left card" style="z-index:3;width:250px;" id="mySidebar">
-  <a class="bar-item button border-bottom large" href="#"><img src="meeple640.png" style="width:50%;"></a>
-  <a class="bar-item button hide-large large" href="javascript:void(0)" onclick="w3_close()">Close <i class="fa fa-remove"></i></a>
-  <div>
-    <a class="bar-item button" onclick="myAccordion('demo')" href="javascript:void(0)">UdS Notes<i class="fa fa-caret-down"></i></a>
-    <div id="demo" class="hide">
-      <a class="bar-item button" href="#">Link</a>
-      <a class="bar-item button" href="#">Link</a>
-      <a class="bar-item button" href="#">Link</a>
+<head>
+  <title>Alex's Github Webpage</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="src/w3schools.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+  <link rel="icon" type="image/png" href="meeple180.png">
+  <script src="https://kit.fontawesome.com/e357f5b9b7.js" crossorigin="anonymous"></script>
+
+  <style>
+    body {
+      font-family: "Roboto", sans-serif
+    }
+
+    .bar-block .bar-item {
+      padding: 16px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+
+  <!-- Sidebar/menu -->
+  <nav class="sidebar bar-block collapse animate-left card" style="z-index:3;width:250px;" id="mySidebar">
+    <br>
+    <div class="container">
+      <img src="meeple640.png" style="width:50%;">
+      <a href="#" onclick="close()" class="hide-large right jumbo padding hover-grey" title="close menu">
+        <i class="fa fa-remove" aria-hidden="true"></i>
+      </a>
     </div>
-  </div>
-  <div>
-    <a class="bar-item button" onclick="myAccordion('demo')" href="javascript:void(0)">CUHK Notes<i class="fa fa-caret-down"></i></a>
-    <div id="demo" class="hide">
-      <a class="bar-item button" href="#">Link</a>
-      <a class="bar-item button" href="#">Link</a>
-      <a class="bar-item button" href="#">Link</a>
+    <div class="bar-block">
+      <a href="#portfolio" onclick="w3_close()" class="bar-item button">
+        <i class="fa-solid fa-book fa-fw margin-right" aria-hidden="true"></i>UdS Notes</a>
+      <a href="#about" onclick="w3_close()" class="bar-item button">
+        <i class="fa-solid fa-book fa-fw margin-right" aria-hidden="true"></i>CUHK Notes</a>
+      <a href="#contact" onclick="w3_close()" class="bar-item button">
+        <i class="fa fa-user fa-fw margin-right" aria-hidden="true"></i>My Proflie</a>
+      <a class="bar-item button" onclick="myAccordion('demo')" href="javascript:void(0)">
+        <i class="fa fa-user fa-fw margin-right" aria-hidden="true"></i>Upcoming...
+        <i class="fa fa-caret-down" aria-hidden="true"></i></a>
+      <div id="demo" class="hide  ">
+        <a class="bar-item button" href="#">
+          <i class="fa-solid fa-play fa-fw margin-right"></i>Upcoming...</a>
+      </div>
     </div>
+  </nav>
+
+  <!-- Overlay effect when opening sidebar on small screens -->
+  <div class="overlay hide-large animate-opacity" onclick="close()" style="cursor:pointer" id="myOverlay"></div>
+
+  <!-- !PAGE CONTENT! -->
+  <div class="main" style="margin-left:250px;">
+
+    <!-- Hidden top bar -->
+    <div id="myTop" class="container top theme large">
+      <a href="#"><img src="meeple640.png" style="width:50px;" class="circle right margin hide-large hover-opacity"></a>
+      <p><i class="fa fa-bars button teal hide-large xlarge" onclick="w3_open()" aria-hidden="true"></i>
+        <span id="myIntro" class="hide">Alex's Github Webpage</span>
+      </p>
+    </div>
+
+    <!-- Header -->
+    <header id="MainPage" class="container theme" style="padding:64px 32px">
+      <div class="container">
+        <h1><b>Alex's Github Webpage</b></h1>
+      </div>
+    </header>
+
+    <div class="container" style="padding:32px">
+      <!-- First Photo Grid-->
+      <div class="section bottombar padding-16">
+        <span class="margin-right">Filter:</span>
+        <button class="button khaki">ALL</button>
+        <button class="button white"><i class="fa fa-diamond margin-right" aria-hidden="true"></i>Notes</button>
+        <button class="button white hide-small"><i class="fa fa-photo margin-right"
+            aria-hidden="true"></i>Photos</button>
+        <button class="button white hide-small"><i class="fa fa-map-pin margin-right"
+            aria-hidden="true"></i>Others</button>
+      </div>
+      <div class="row-padding">
+        <div class="third container margin-bottom">
+          <img src="/w3images/mountains.jpg" alt="Norway" style="width:100%" class="hover-opacity">
+          <div class="container white">
+            <p><b>Lorem Ipsum</b></p>
+            <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies
+              congue gravida diam non fringilla.</p>
+          </div>
+        </div>
+        <div class="third container margin-bottom">
+          <img src="/w3images/lights.jpg" alt="Norway" style="width:100%" class="hover-opacity">
+          <div class="container white">
+            <p><b>Lorem Ipsum</b></p>
+            <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies
+              congue gravida diam non fringilla.</p>
+          </div>
+        </div>
+        <div class="third container">
+          <img src="/w3images/nature.jpg" alt="Norway" style="width:100%" class="hover-opacity">
+          <div class="container white">
+            <p><b>Lorem Ipsum</b></p>
+            <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies
+              congue gravida diam non fringilla.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Second Photo Grid-->
+      <div class="row-padding">
+        <div class="third container margin-bottom">
+          <img src="/w3images/p1.jpg" alt="Norway" style="width:100%" class="hover-opacity">
+          <div class="container white">
+            <p><b>Lorem Ipsum</b></p>
+            <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies
+              congue gravida diam non fringilla.</p>
+          </div>
+        </div>
+        <div class="third container margin-bottom">
+          <img src="/w3images/p2.jpg" alt="Norway" style="width:100%" class="hover-opacity">
+          <div class="container white">
+            <p><b>Lorem Ipsum</b></p>
+            <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies
+              congue gravida diam non fringilla.</p>
+          </div>
+        </div>
+        <div class="third container">
+          <img src="/w3images/p3.jpg" alt="Norway" style="width:100%" class="hover-opacity">
+          <div class="container white">
+            <p><b>Lorem Ipsum</b></p>
+            <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies
+              congue gravida diam non fringilla.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pagination -->
+      <div class="center padding-32">
+        <div class="bar">
+          <a href="#" class="bar-item button hover-black">«</a>
+          <a href="#" class="bar-item teal button">1</a>
+          <a href="#" class="bar-item button hover-black">2</a>
+          <a href="#" class="bar-item button hover-black">3</a>
+          <a href="#" class="bar-item button hover-black">4</a>
+          <a href="#" class="bar-item button hover-black">»</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container" style="padding:32px">
+
+      <h2>Donec luctus auctor quam.</h2>
+
+      <p>Donec luctus auctor quam. Fusce vitae tellus et ante faucibus sagittis non lobortis est.</p>
+
+      <ul class="leftbar theme-border" style="list-style:none">
+        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </li>
+      </ul>
+      <br>
+
+      <hr>
+      <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </h2>
+      <div class="container sand leftbar">
+        <p><i>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </i><br>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+      </div>
+
+      <hr>
+      <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+
+      <div class="panel light-grey padding-16 card">
+        <h3 class="center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </h3>
+        <div class="content" style="max-width:800px">
+          alt="meeple"></a><br>
+          <div class="row">
+            <div class="col m6">
+              <a href="tryw3css_templates_band.htm" target="_blank" class="button padding-large dark-grey"
+                style="width:98.5%">Lorem ipsum</a>
+            </div>
+            <div class="col m6">
+              <a href="w3css_templates.asp" class="button padding-large dark-grey" style="width:98.5%">Lorem ipsum»</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <footer class="container theme" style="padding:32px">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+    </footer>
+
   </div>
-  <a class="bar-item button" href="/AboutMe.html">My Profile</a>
-  <a class="bar-item button" href="#">Upcoming...</a>
-</nav>
 
-<div class="overlay hide-large animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
+  <script>
+    // Open and close the sidebar on medium and small screens
+    function open() {
+      document.getElementById("mySidebar").style.display = "block";
+      document.getElementById("myOverlay").style.display = "block";
+    }
 
-<div class="main" style="margin-left:250px;">
+    function close() {
+      document.getElementById("mySidebar").style.display = "none";
+      document.getElementById("myOverlay").style.display = "none";
+    }
 
-<div id="myTop" class="container top theme large">
-  <p><i class="fa fa-bars button teal hide-large xlarge" onclick="w3_open()"></i>
-  <span id="myIntro" class="hide">Alex's Github Webpage</span></p>
-</div>
+    // Change style of top container on scroll
+    window.onscroll = function () { myFunction() };
+    function myFunction() {
+      if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+        document.getElementById("myTop").classList.add("card-4", "animate-opacity");
+        document.getElementById("myIntro").classList.add("show-inline-block");
+      } else {
+        document.getElementById("myIntro").classList.remove("show-inline-block");
+        document.getElementById("myTop").classList.remove("card-4", "animate-opacity");
+      }
+    }
 
-<header class="container theme" style="padding:64px 32px">
-  <h1 class="xxxlarge">Alex's Github Webpage</h1>
-</header>
+    // Accordions
+    function myAccordion(id) {
+      var x = document.getElementById(id);
+      if (x.className.indexOf("show") == -1) {
+        x.className += " show";
+        x.previousElementSibling.className += " theme";
+      } else {
+        x.className = x.className.replace("show", "");
+        x.previousElementSibling.className =
+          x.previousElementSibling.className.replace(" theme", "");
+      }
+    }
+  </script>
 
-<div class="container" style="padding:32px">
-
-<h2>Donec luctus auctor quam.</h2>
-
-<p>Donec luctus auctor quam. Fusce vitae tellus et ante faucibus sagittis non lobortis est.</p>
-
-<ul class="leftbar theme-border" style="list-style:none">
- <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </li>
-</ul>
-<br>
-<img src="meeple640.png" style="width:100%" alt="Responsive">
-
-<hr>
-<h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </h2>
-<div class="container sand leftbar">
-<p><i>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </i><br>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-</div>
-
-<hr>
-<h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-
-<div class="panel light-grey padding-16 card">
-<h3 class="center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </h3>
-<div class="content" style="max-width:800px">
-<a href="#" target="_blank" title=""><img src="meeple640.png" style="width:98%;margin:20px 0" alt="meeple"></a><br>
-<div class="row">
-  <div class="col m6">
-    <a href="tryw3css_templates_band.htm" target="_blank" class="button padding-large dark-grey" style="width:98.5%">Lorem ipsum</a>
-  </div>
-  <div class="col m6">
-    <a href="w3css_templates.asp" class="button padding-large dark-grey" style="width:98.5%">Lorem ipsum»</a>
-  </div>
-</div>
-</div>
-</div>
-
-</div>
-
-<footer class="container theme" style="padding:32px">
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-</footer>
-     
-</div>
-
-<script>
-// Open and close the sidebar on medium and small screens
-function w3_open() {
-  document.getElementById("mySidebar").style.display = "block";
-  document.getElementById("myOverlay").style.display = "block";
-}
-
-function w3_close() {
-  document.getElementById("mySidebar").style.display = "none";
-  document.getElementById("myOverlay").style.display = "none";
-}
-
-// Change style of top container on scroll
-window.onscroll = function() {myFunction()};
-function myFunction() {
-  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-    document.getElementById("myTop").classList.add("card-4", "animate-opacity");
-    document.getElementById("myIntro").classList.add("show-inline-block");
-  } else {
-    document.getElementById("myIntro").classList.remove("show-inline-block");
-    document.getElementById("myTop").classList.remove("card-4", "animate-opacity");
-  }
-}
-
-// Accordions
-function myAccordion(id) {
-  var x = document.getElementById(id);
-  if (x.className.indexOf("show") == -1) {
-    x.className += " show";
-    x.previousElementSibling.className += " theme";
-  } else { 
-    x.className = x.className.replace("show", "");
-    x.previousElementSibling.className = 
-    x.previousElementSibling.className.replace(" theme", "");
-  }
-}
-</script>
-     
 </body>
-</html> 
+
+</html>
