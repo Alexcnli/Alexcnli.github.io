@@ -50,7 +50,7 @@
   </nav>
 
   <!-- Overlay effect when opening sidebar on small screens -->
-  <div class="overlay hide-large animate-opacity" onclick="close()" style="cursor:pointer" id="myOverlay"></div>
+  <div class="overlay hide-large animate-opacity" onclick="sidebar_close()" style="cursor:pointer" id="myOverlay"></div>
 
   <!-- !PAGE CONTENT! -->
   <div class="main" style="margin-left:250px;">
@@ -58,7 +58,7 @@
     <!-- Hidden top bar -->
     <div id="myTop" class="container top theme large">
       <a href="#"><img src="meeple640.png" style="width:50px;" class="circle right margin hide-large hover-opacity"></a>
-      <p><i class="fa fa-bars button teal hide-large xlarge" onclick="open()" aria-hidden="true"></i>
+      <p><i class="fa fa-bars button teal hide-large xlarge" onclick="sidebar_open()" aria-hidden="true"></i>
         <span id="myIntro" class="hide">Alex's Github Webpage</span>
       </p>
     </div>
@@ -197,12 +197,12 @@
 
   <script>
     // Open and close the sidebar on medium and small screens
-    function open() {
+    function sidebar_open() {
       document.getElementById("mySidebar").style.display = "block";
       document.getElementById("myOverlay").style.display = "block";
     }
 
-    function close() {
+    function sidebar_close() {
       document.getElementById("mySidebar").style.display = "none";
       document.getElementById("myOverlay").style.display = "none";
     }
