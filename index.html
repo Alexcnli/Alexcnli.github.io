@@ -4,6 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Me</title>
+  <style>
+    .note {
+      margin-bottom: 20px;
+    }
+    .note-title {
+      font-weight: bold;
+    }
+    .note-content {
+      font-style: italic;
+    }
+  </style>
   <script>
     document.addEventListener("DOMContentLoaded", function() {
       fetch('/notes/notes.json')
@@ -12,8 +23,21 @@
           const notesList = document.getElementById('notes-list');
           files.forEach(file => {
             const listItem = document.createElement('li');
-            listItem.innerHTML = `<a href="/notes/${file}">${file}</a>`;
+            listItem.className = 'note';
+            listItem.innerHTML = `<div class="note-title"><a href="/notes/${file}">${file}</a></div>`;
             notesList.appendChild(listItem);
+            
+            // Fetch the content of the note file
+            fetch(`/notes/${file}`)
+              .then(response => response.text())
+              .then(content => {
+                const snippet = content.split('\n').slice(0, 5).join('\n'); // Get first 5 lines as snippet
+                const snippetDiv = document.createElement('div');
+                snippetDiv.className = 'note-content';
+                snippetDiv.textContent = snippet;
+                listItem.appendChild(snippetDiv);
+              })
+              .catch(error => console.error('Error fetching note content:', error));
           });
         })
         .catch(error => console.error('Error fetching notes:', error));
