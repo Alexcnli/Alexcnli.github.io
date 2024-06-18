@@ -139,7 +139,7 @@
       <!-- Notes Section -->
       <div class="container" style="padding:32px" id="notes-section">
         <h2>My Notes</h2>
-        <ul id="notes-list" class="leftbar theme-border" style="list-style:none"></ul>
+        <div class="row-padding" id="notes-list"></div>
       </div>
 
       <!-- Pagination -->
@@ -249,8 +249,14 @@
           const notesList = document.getElementById('notes-list');
           files.forEach(file => {
             if (file.endsWith('.md')) { // Only include markdown files
-              const listItem = document.createElement('li');
-              listItem.innerHTML = `<a href="notes/${file}">${file}</a>`;
+              const listItem = document.createElement('div');
+              listItem.className = 'third container margin-bottom';
+              listItem.innerHTML = `
+                <img src="src/norway.jpg" alt="Note Thumbnail" style="width:100%" class="hover-opacity">
+                <div class="container white">
+                  <p><b>${file}</b></p>
+                  <p><a href="notes/${file}">Read Note</a></p>
+                </div>`;
               notesList.appendChild(listItem);
             }
           });
