@@ -1,5 +1,32 @@
 [
-  "test.html",
-  "test.md",
-  "Lecture_6.pdf"
+  {
+    "file": "Lecture_1.pdf",
+    "title": "Lecture 1",
+    "coverImage": "norway.jpg"
+  },
+  {
+    "file": "Lecture_2.pdf",
+    "title": "Lecture 2",
+    "coverImage": "norway.jpg"
+  },
+  {
+    "file": "Lecture_3.pdf",
+    "title": "Lecture 3",
+    "coverImage": "norway.jpg"
+  },
+  {
+    "file": "Lecture_4.pdf",
+    "title": "Lecture 4",
+    "coverImage": "norway.jpg"
+  },
+  {
+    "file": "Lecture_5.pdf",
+    "title": "Lecture 5",
+    "coverImage": "norway.jpg"
+  },
+  {
+    "file": "Lecture_6.pdf",
+    "title": "Lecture 6",
+    "coverImage": "norway.jpg"
+  }
 ]
