@@ -70,7 +70,8 @@
 
                         // Note link
                         const noteLink = document.createElement('a');
-                        noteLink.href = `/notes/${category}/${note.title}.pdf`;
+                        const formattedTitle = note.title.replace(/\s+/g, '_'); // Replace spaces with underscores
+                        noteLink.href = `/notes/${category}/${formattedTitle}.pdf`;
                         noteLink.target = '_blank';
 
                         // Cover image
