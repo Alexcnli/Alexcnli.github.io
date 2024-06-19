@@ -36,6 +36,10 @@
     // </div>
     
     document.addEventListener("DOMContentLoaded", function () {
+        if (!window.location.hash) {
+            window.location.hash = "#notes";
+        }
+        
         fetch('/notes/notes.json')
             .then(response => response.json())
             .then(notes => {
