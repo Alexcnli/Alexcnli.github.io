@@ -1,32 +1,56 @@
 [
   {
-    "file": "Lecture_1.pdf",
-    "title": "Lecture 1",
-    "coverImage": "pv.png"
+    "file": "AI.pdf",
+    "title": "AI notes",
+    "coverImage": "pv.jpg",
+    "category": "note"
   },
   {
-    "file": "Lecture_2.pdf",
-    "title": "Lecture 2",
-    "coverImage": "pv.png"
+    "file": "Cryptography.pdf",
+    "title": "Cryptography Notes",
+    "coverImage": "pv.jpg",
+    "category": "notes"
   },
   {
-    "file": "Lecture_3.pdf",
-    "title": "Lecture 3",
-    "coverImage": "pv.png"
-  },
-  {
-    "file": "Lecture_4.pdf",
-    "title": "Lecture 4",
-    "coverImage": "pv.png"
-  },
-  {
-    "file": "Lecture_5.pdf",
-    "title": "Lecture 5",
-    "coverImage": "pv.png"
+    "file": "HCI.pdf",
+    "title": "HCI notes",
+    "coverImage": "pv.jpg",
+    "category": "notes"
   },
   {
     "file": "Lecture_6.pdf",
     "title": "Lecture 6",
-    "coverImage": "pv.png"
+    "coverImage": "pv.jpg",
+    "category": "PV"
+  },
+  {
+    "file": "Lecture_5.pdf",
+    "title": "Lecture 5",
+    "coverImage": "pv.jpg",
+    "category": "PV"
+  },
+  {
+    "file": "Lecture_4.pdf",
+    "title": "Lecture 4",
+    "coverImage": "pv.jpg",
+    "category": "PV"
+  },
+  {
+    "file": "Lecture_3.pdf",
+    "title": "Lecture 3",
+    "coverImage": "pv.jpg",
+    "category": "PV"
+  },
+  {
+    "file": "Lecture_2.pdf",
+    "title": "Lecture 2",
+    "coverImage": "pv.jpg",
+    "category": "PV"
+  },
+  {
+    "file": "Lecture_1.pdf",
+    "title": "Lecture 1",
+    "coverImage": "pv.jpg",
+    "category": "PV"
   }
 ]
