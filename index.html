@@ -70,7 +70,7 @@
 
                         // Note link
                         const noteLink = document.createElement('a');
-                        noteLink.href = `/notes/${note.file}`;
+                        noteLink.href = `/notes/${category}/${note.file}`;
                         noteLink.target = '_blank';
 
                         // Cover image
@@ -205,20 +205,9 @@
             </div>
         </header>
 
-        <div class="container" style="padding:32px 32px">
-            <h2>My Notes</h2>
-            <!-- First Photo Grid-->
-
-            <div class="row-padding" id="UdS">
-            </div>
-            <div class="row-padding" id="CUHK">
-            </div>
-            <div class="row-padding" id="notes-list">
-            </div>
+        <div class="container" style="padding:32px 32px" id="content">
         </div>
     </div>
-
-
 
     <footer class="container teal center margin-top">
         <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
