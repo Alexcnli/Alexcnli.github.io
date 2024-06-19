@@ -34,47 +34,74 @@
     //       </div>
     //   </a>
     // </div>
-
+    
     document.addEventListener("DOMContentLoaded", function () {
         fetch('/notes/notes.json')
             .then(response => response.json())
             .then(notes => {
-                const notesList = document.getElementById('notes-list');
+                const content = document.getElementById('content');
+                const categories = {};
+
+                // Group notes by category
                 notes.forEach(note => {
-
-                    // Note item container
-                    const noteItem = document.createElement('div');
-                    noteItem.className = 'third container margin-bottom';
-
-                    // Note link
-                    const noteLink = document.createElement('a');
-                    noteLink.href = `/notes/${note.file}`;
-                    noteLink.target = '_blank';
-
-                    // Cover image
-                    const coverImage = document.createElement('img');
-                    coverImage.className = 'hover-opacity';
-                    coverImage.src = `/notes/img/${note.coverImage}`;
-                    coverImage.alt = note.title;
-                    coverImage.style.width = '100%';
-
-                    // Note details container
-                    const noteDetails = document.createElement('div');
-                    noteDetails.className = 'container white';
-
-                    // Note title
-                    const noteTitle = document.createElement('p');
-                    noteTitle.innerHTML = `<b>${note.title}</b>`;
-
-                    noteDetails.appendChild(noteTitle);
-                    noteLink.appendChild(coverImage);
-                    noteLink.appendChild(noteDetails);
-                    noteItem.appendChild(noteLink);
-                    notesList.appendChild(noteItem);
+                    if (!categories[note.category]) {
+                        categories[note.category] = [];
+                    }
+                    categories[note.category].push(note);
                 });
+
+                // Create sections for each category
+                for (const category in categories) {
+                    const section = document.createElement('div');
+                    section.id = category;
+                    section.className = 'container';
+
+                    const header = document.createElement('h2');
+                    header.textContent = `${category} Notes`;
+                    section.appendChild(header);
+
+                    const list = document.createElement('ul');
+                    list.style.listStyleType = 'none';
+
+                    categories[category].forEach(note => {
+                        // Note item container
+                        const noteItem = document.createElement('div');
+                        noteItem.className = 'third container margin-bottom';
+
+                        // Note link
+                        const noteLink = document.createElement('a');
+                        noteLink.href = `/notes/${note.file}`;
+                        noteLink.target = '_blank';
+
+                        // Cover image
+                        const coverImage = document.createElement('img');
+                        coverImage.className = 'hover-opacity';
+                        coverImage.src = `/notes/img/${note.coverImage}`;
+                        coverImage.alt = note.title;
+                        coverImage.style.width = '100%';
+
+                        // Note details container
+                        const noteDetails = document.createElement('div');
+                        noteDetails.className = 'container white';
+
+                        // Note title
+                        const noteTitle = document.createElement('p');
+                        noteTitle.innerHTML = `<b>${note.title}</b>`;
+
+                        noteDetails.appendChild(noteTitle);
+                        noteLink.appendChild(coverImage);
+                        noteLink.appendChild(noteDetails);
+                        noteItem.appendChild(noteLink);
+                        list.appendChild(noteItem);
+                    });
+
+                    section.appendChild(list);
+                    content.appendChild(section);
+                }
             })
             .catch(error => console.error('Error fetching notes:', error));
     });
+
 
     // Open and close the sidebar on medium and small screens
     function sidebar_open() {
@@ -125,17 +152,32 @@
         </div>
         <div class="bar-block">
             <a href="#" onclick="sidebar_close()" class="bar-item button">
-                <i class="fa-solid fa-book fa-fw margin-right" aria-hidden="true"></i>UdS Notes</a>
+                <i class="fa-solid fa-book fa-fw margin-right" aria-hidden="true"></i>My Notes</a>
+
+            <a class="bar-item button" onclick="myAccordion('uds')" href="javascript:void(0)">
+                <i class="fa-solid fa-book fa-fw margin-right" aria-hidden="true"></i>UdS Courses
+                <i class="fa fa-caret-down" aria-hidden="true"></i></a>
+            <div id="uds" class="hide" style="padding:0px 0px 0px 32px">
+                <a href="#AI" onclick="sidebar_close()" class="bar-item button">
+                    <i class="fa-solid fa-book-open fa-fw margin-right" aria-hidden="true"></i>AI</a>
+                <a href="#PV" onclick="sidebar_close()" class="bar-item button">
+                    <i class="fa-solid fa-book-open fa-fw margin-right" aria-hidden="true"></i>PV</a>
+            </div>
             <a href="#CUHK" onclick="sidebar_close()" class="bar-item button">
-                <i class="fa-solid fa-book fa-fw margin-right" aria-hidden="true"></i>CUHK Notes</a>
+                <i class="fa-solid fa-book fa-fw margin-right" aria-hidden="true"></i>CUHK Courses</a>
+
             <a href="AboutMe.html" onclick="sidebar_close()" class="bar-item button">
                 <i class="fa fa-user fa-fw margin-right" aria-hidden="true"></i>My Profile</a>
-            <a class="bar-item button" onclick="myAccordion('demo')" href="javascript:void(0)">
-                <i class="fa fa-user fa-fw margin-right" aria-hidden="true"></i>Upcoming...
+
+            <a class="bar-item button" onclick="myAccordion('work')" href="javascript:void(0)">
+                <i class="fa fa-diagram-project fa-fw margin-right" aria-hidden="true"></i>Recent Work
                 <i class="fa fa-caret-down" aria-hidden="true"></i></a>
-            <div id="demo" class="hide">
-                <a class="bar-item button" href="#">
-                    <i class="fa-solid fa-play fa-fw margin-right"></i>Upcoming...</a>
+            <div id="work" class="hide" style="padding:0px 0px 0px 32px">
+                <a href="https://github.com/Alexcnli/Azul_Test" onclick="sidebar_close()" class="bar-item button">
+                    <i class="fa-solid fa-link fa-fw margin-right" aria-hidden="true"></i>Azul (C++)</a>
+                <a href="https://github.com/Alexcnli/hanabi_simulator" onclick="sidebar_close()"
+                    class="bar-item button">
+                    <i class="fa-solid fa-link fa-fw margin-right" aria-hidden="true"></i>Hanabi (Python)</a>
             </div>
         </div>
     </nav>
@@ -167,68 +209,20 @@
             <h2>My Notes</h2>
             <!-- First Photo Grid-->
 
+            <div class="row-padding" id="UdS">
+            </div>
+            <div class="row-padding" id="CUHK">
+            </div>
             <div class="row-padding" id="notes-list">
             </div>
         </div>
     </div>
 
-    <!-- Feature that not in use -->
-    <!-- <div class="container" style="padding:32px">
 
-        <div class="center padding-32">
-            <div class="bar">
-                <a href="#" class="bar-item button hover-black">«</a>
-                <a href="#" class="bar-item teal button">1</a>
-                <a href="#" class="bar-item button hover-black">2</a>
-                <a href="#" class="bar-item button hover-black">3</a>
-                <a href="#" class="bar-item button hover-black">4</a>
-                <a href="#" class="bar-item button hover-black">»</a>
-            </div>
-        </div>
-
-        <div class="section bottombar padding-16">
-            <span class="margin-right">Filter:</span>
-            <button class="button khaki">ALL</button>
-            <button class="button white"><i class="fa fa-diamond margin-right" aria-hidden="true"></i>Notes</button>
-            <button class="button white hide-small"><i class="fa fa-photo margin-right" aria-hidden="true"></i>Photos</button>
-            <button class="button white hide-small"><i class="fa fa-map-pin margin-right" aria-hidden="true"></i>Others</button>
-        </div>
-
-        <h2>Quote bar</h2>
-        <ul class="leftbar theme-border" style="list-style:none">
-            <li>A quote.</li>
-        </ul>
-        <br>
-
-        <hr>
-        <h2>Quote bar with colour</h2>
-        <div class="container sand leftbar">
-            <p>a quote</p>
-        </div>
-
-        <hr>
-        <h2>A display card with pic</h2>
-
-        <div class="panel light-grey padding-16 card">
-            <div class="content" style="max-width:800px">
-                <img src="src/norway.jpg" alt="meeple"><br>
-                <div class="row">
-                    <div class="col m6">
-                        <a href="#" target="_blank" class="button padding-large dark-grey" style="width:98.5%">Option 1</a>
-                    </div>
-                    <div class="col m6">
-                        <a href="#" class="button padding-large dark-grey" style="width:98.5%">Option 2</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
 
     <footer class="container teal center margin-top">
         <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
     </footer>
-
-    </div>
 </body>
 
 </html>
