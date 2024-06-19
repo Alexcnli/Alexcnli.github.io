@@ -36,10 +36,6 @@
     // </div>
     
     document.addEventListener("DOMContentLoaded", function () {
-        if (!window.location.hash) {
-            window.location.hash = "#notes";
-        }
-        
         fetch('/notes/notes.json')
             .then(response => response.json())
             .then(notes => {
@@ -155,7 +151,7 @@
             </a>
         </div>
         <div class="bar-block">
-            <a href="#" onclick="sidebar_close()" class="bar-item button">
+            <a href="#notes" onclick="sidebar_close()" class="bar-item button">
                 <i class="fa-solid fa-book fa-fw margin-right" aria-hidden="true"></i>My Notes</a>
 
             <a class="bar-item button" onclick="myAccordion('uds')" href="javascript:void(0)">
