@@ -1,131 +1,142 @@
 [
   {
     "title": "AI_notes",
+    "course": "notes",
     "category": "notes"
   },
   {
     "title": "Cryptography_notes",
+    "course": "notes",
     "category": "notes"
   },
   {
     "title": "HCI_notes",
+    "course": "notes",
     "category": "notes"
   },
   {
     "title": "Lecture_02_Historical_Ciphers",
-    "category": "cryptography"
+    "course": "cryptography",
+    "category": "UdS"
   },
   {     
     "title": "Lecture_03_Probability",
-    "category": "cryptography"
-  
+    "course": "cryptography",
+    "category": "UdS"
   },
   {     
     "title": "Lecture_04_Perfect_Secrecy",
-    "category": "cryptography"
-  
+    "course": "cryptography",
+    "category": "UdS"
   },
   {     
     "title": "Lecture_05_Basics_of_Private_Key_Encryption",
-    "category": "cryptography"
-  
+    "course": "cryptography",
+    "category": "UdS"
   },
   {     
     "title": "Lecture_06_CPA_Security",
-    "category": "cryptography"
-  
+    "course": "cryptography",
+    "category": "UdS"
   },
   {     
     "title": "Lecture_07_Block_Ciphers",
-    "category": "cryptography"
-  
+    "course": "cryptography",
+    "category": "UdS"
   },
   {     
     "title": "Lecture_08_Hash_Functions",
-    "category": "cryptography"
-  
+    "course": "cryptography",
+    "category": "UdS"
   },
   {     
     "title": "Lecture_09_Authentication",
-    "category": "cryptography"
-  
+    "course": "cryptography",
+    "category": "UdS"
   },
   {     
     "title": "Lecture_10_IND-CCA_Security",
-    "category": "cryptography"
-  
+    "course": "cryptography",
+    "category": "UdS"
   },
   {     
     "title": "Lecture_11_Number_Theory_1",
-    "category": "cryptography"
-  
+    "course": "cryptography",
+    "category": "UdS"
   },
   {     
     "title": "Lecture_12_Number_Theory_2",
-    "category": "cryptography"
-  
+    "course": "cryptography",
+    "category": "UdS"
   },
   {     
     "title": "Lecture_13_Key_Distribution_Exchange",
-    "category": "cryptography"
-  
+    "course": "cryptography",
+    "category": "UdS"
   },
   {     
     "title": "Lecture_14_Public_Key_Encryption",
-    "category": "cryptography"
-  
+    "course": "cryptography",
+    "category": "UdS"
   },
   {     
     "title": "Lecture_15_Hybrid_Encryption",
-    "category": "cryptography"
-  
+    "course": "cryptography",
+    "category": "UdS"
   },
   {     
     "title": "Lecture_16_RSA",
-    "category": "cryptography"
-  
+    "course": "cryptography",
+    "category": "UdS"
   },
   {     
     "title": "Lecture_17_Signatures",
-    "category": "cryptography"
-  
+    "course": "cryptography",
+    "category": "UdS"
   },
   {     
     "title": "Lecture_18_Signatures_2",
-    "category": "cryptography"
-  
+    "course": "cryptography",
+    "category": "UdS"
   },
   {     
     "title": "Lecture_19_Signatures_3",
-    "category": "cryptography"
-  
+    "course": "cryptography",
+    "category": "UdS"
+  },
   {     
     "title": "Lecture_20_Tightness_and_Real_World_Parameters",
-    "category": "cryptography"
+    "course": "cryptography",
+    "category": "UdS"
   },
-
   {
     "title": "Lecture_6",
-    "category": "PV"
+    "course": "PV",
+    "category": "UdS"
   },
   {
     "title": "Lecture_5",
-    "category": "PV"
+    "course": "PV",
+    "category": "UdS"
   },
   {
     "title": "Lecture_4",
-    "category": "PV"
+    "course": "PV",
+    "category": "UdS"
   },
   {
     "title": "Lecture_3",
-    "category": "PV"
+    "course": "PV",
+    "category": "UdS"
   },
   {
     "title": "Lecture_2",
-    "category": "PV"
+    "course": "PV",
+    "category": "UdS"
   },
   {
     "title": "Lecture_1",
-    "category": "PV"
+    "course": "PV",
+    "category": "UdS"
   }
 ]
