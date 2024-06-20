@@ -12,6 +12,99 @@
     "category": "notes"
   },
   {
+    "title": "Lecture_02_Historical_Ciphers",
+    "category": "cryptography"
+  },
+  {     
+    "title": "Lecture_03_Probability",
+    "category": "cryptography"
+  
+  },
+  {     
+    "title": "Lecture_04_Perfect_Secrecy",
+    "category": "cryptography"
+  
+  },
+  {     
+    "title": "Lecture_05_Basics_of_Private_Key_Encryption",
+    "category": "cryptography"
+  
+  },
+  {     
+    "title": "Lecture_06_CPA_Security",
+    "category": "cryptography"
+  
+  },
+  {     
+    "title": "Lecture_07_Block_Ciphers",
+    "category": "cryptography"
+  
+  },
+  {     
+    "title": "Lecture_08_Hash_Functions",
+    "category": "cryptography"
+  
+  },
+  {     
+    "title": "Lecture_09_Authentication",
+    "category": "cryptography"
+  
+  },
+  {     
+    "title": "Lecture_10_IND-CCA_Security",
+    "category": "cryptography"
+  
+  },
+  {     
+    "title": "Lecture_11_Number_Theory_1",
+    "category": "cryptography"
+  
+  },
+  {     
+    "title": "Lecture_12_Number_Theory_2",
+    "category": "cryptography"
+  
+  },
+  {     
+    "title": "Lecture_13_Key_Distribution_Exchange",
+    "category": "cryptography"
+  
+  },
+  {     
+    "title": "Lecture_14_Public_Key_Encryption",
+    "category": "cryptography"
+  
+  },
+  {     
+    "title": "Lecture_15_Hybrid_Encryption",
+    "category": "cryptography"
+  
+  },
+  {     
+    "title": "Lecture_16_RSA",
+    "category": "cryptography"
+  
+  },
+  {     
+    "title": "Lecture_17_Signatures",
+    "category": "cryptography"
+  
+  },
+  {     
+    "title": "Lecture_18_Signatures_2",
+    "category": "cryptography"
+  
+  },
+  {     
+    "title": "Lecture_19_Signatures_3",
+    "category": "cryptography"
+  
+  {     
+    "title": "Lecture_20_Tightness_and_Real_World_Parameters",
+    "category": "cryptography"
+  },
+
+  {
     "title": "Lecture_6",
     "category": "PV"
   },
