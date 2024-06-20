@@ -40,30 +40,30 @@
             .then(response => response.json())
             .then(notes => {
                 const content = document.getElementById('content');
-                const categories = {};
+                const courses = {};
 
-                // Group notes by category
+                // Group notes by course
                 notes.forEach(note => {
-                    if (!categories[note.category]) {
-                        categories[note.category] = [];
+                    if (!courses[note.course]) {
+                        courses[note.course] = [];
                     }
-                    categories[note.category].push(note);
+                    courses[note.course].push(note);
                 });
 
-                // Create sections for each category
-                for (const category in categories) {
+                // Create sections for each course
+                for (const course in courses) {
                     const section = document.createElement('div');
-                    section.id = category;
+                    section.id = course;
                     section.className = 'container';
 
                     const header = document.createElement('h2');
-                    header.textContent = `${category}`;
+                    header.textContent = `${course}`;
                     section.appendChild(header);
 
                     const list = document.createElement('ul');
                     list.style.listStyleType = 'none';
 
-                    categories[category].forEach(note => {
+                    courses[course].forEach(note => {
                         // Note item container
                         const noteItem = document.createElement('div');
                         noteItem.className = 'third container margin-bottom';
@@ -71,13 +71,13 @@
                         // Note link
                         const noteLink = document.createElement('a');
                         const formattedTitle = note.title.replace(/\s+/g, '_'); // Replace spaces with underscores
-                        noteLink.href = `/notes/${category}/${formattedTitle}.pdf`;
+                        noteLink.href = `/notes/${course}/${formattedTitle}.pdf`;
                         noteLink.target = '_blank';
 
                         // Cover image
                         const coverImage = document.createElement('img');
                         coverImage.className = 'hover-opacity';
-                        coverImage.src = `/notes/img/${category}.png`;
+                        coverImage.src = `/notes/img/${course}.png`;
                         coverImage.alt = note.title;
                         coverImage.style.width = '100%';
 
